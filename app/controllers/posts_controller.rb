@@ -14,6 +14,9 @@ class PostsController < ApplicationController
   end
 
   def edit
+    unless current_user.id == @post.user_id
+      redirect_to posts_path, notice: "権限がありません！"
+    end
   end
 
   def create
@@ -48,10 +51,14 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post.destroy
-    respond_to do |format|
-      format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
-      format.json { head :no_content }
+    unless current_user.id == @post.user_id
+      redirect_to posts_path, notice: "権限がありません！"
+    else
+      @post.destroy
+      respond_to do |format|
+        format.html { redirect_to posts_url, notice: "削除しました！" }
+        format.json { head :no_content }
+      end
     end
   end
 
