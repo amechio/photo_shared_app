@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Icon</th>
       <th>User</th>
       <th>Picture</th>
       <th>Content</th>
@@ -15,6 +16,8 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
+        <td><%= image_tag post.user.icon.url if post.user.icon && post.user.icon.url %></td>
+        <td><%= post.user.name %></td>
         <td><%= image_tag post.picture.url if post.picture && post.picture.url %></td>
         <td><%= post.content %></td>
         <td><%= link_to 'Show', post %></td>
