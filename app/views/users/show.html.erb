@@ -3,4 +3,6 @@
 <p>メールアドレス: <%= @user.email %></p>
 <%= link_to "お気に入り一覧", favorites_path %>
 <%= link_to "ホームへ", posts_path, class:"btn" %>
-<%= link_to "edit", edit_user_path %>
+<% if @user.id == current_user.id %>
+  <%= link_to "edit", edit_user_path(id: @user.id) %>
+<% end %>
