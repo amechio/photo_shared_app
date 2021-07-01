@@ -7,7 +7,7 @@ gem 'mini_magick'
 gem 'mimemagic', '0.3.7'
 gem 'bcrypt'
 group :development do
-gem 'letter_opener_web'
+  gem 'letter_opener_web'
 end
 
 gem 'rails', '~> 5.2.5'
