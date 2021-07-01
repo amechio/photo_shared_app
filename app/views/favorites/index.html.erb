@@ -1,18 +1,12 @@
-<h1 class="title">お気に入り</h1>
-<table>
-  <tr>
-    <th>icon</th>
-    <th>name</th>
-    <th>picture</th>
-    <th>content</th>
-  </tr>
+<h1 class="title">お気に入り一覧</h1>
+<div>
   <% @favorites.each do |favorite| %>
-  <tr>
-    <td><%= image_tag favorite.post.user.icon.url if favorite.post.user.icon && favorite.post.user.icon.url %></td>
-    <td><%= favorite.post.user.name %></td>
-    <td><%= image_tag favorite.post.picture.url if favorite.post.picture && favorite.post.picture.url %></td>
-    <td><%= favorite.post.content %></td>
-    </tr>
+  <ul>
+    <li><%= image_tag favorite.post.user.icon.url if favorite.post.user.icon && favorite.post.user.icon.url %></li>
+    <li><%= favorite.post.user.name %></li>
+    <li><%= image_tag favorite.post.picture.url if favorite.post.picture && favorite.post.picture.url %></li>
+    <li><%= favorite.post.content %></li>
+  </ul>
   <% end %>
-</table>
-<div><%= link_to "投稿一覧へ", posts_path %></div>
+</div>
+<div><%= link_to "ホームへ", posts_path %></div>

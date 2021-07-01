@@ -10,6 +10,180 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+
+ *= require bootstrap/dist/css/bootstrap.min
+
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: #F7F7F7; */
+  text-align: center;
+  margin: 0;
+}
+
+
+header {
+  height: 50px;
+  width: 100%;
+  /* background-color: #F46EE7; */
+  background: linear-gradient(to bottom right, #5D5DEA, #E253D4, #E5C600);
+  /* color: white; */
+  font-weight: 10px;
+  text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+               -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+               0px 1px 0 #FFF,  0-1px 0 #FFF,
+               -1px 0 0 #FFF, 1px 0 0 #FFF;
+}
+.status {
+  line-height: 50px;
+  float: left;
+  padding: 0 50px;
+}
+.link {
+  line-height: 50px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid;
+  border-radius: 6px;
+  border-color: white;
+  padding: 4px;
+  margin: 5px;
+  clear: both;
+}
+
+.main {
+  text-align: center;
+}
+
+h1 {
+  color: #EF51D7;
+  margin: 10px 100px;
+  text-align: center;
+}
+/* .set {
+  margin: 10px 60px;
+} */
+.label {
+  color: #0071ff;
+  width: 150px;
+}
+.input {
+  border-color: linear-gradient(to bottom right, #5D5DEA, #E253D4, #E5C600);
+  border-radius: 6px;
+  padding: 4px;
+  width: 250px;
+}
+.btn {
+  border-radius: 6px;
+  /* background-color: #0071ff; */
+  background: linear-gradient(to bottom right, #5D5DEA, #E253D4, #E5C600);
+  /* color: white; */
+  text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+               -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+               0px 1px 0 #FFF,  0-1px 0 #FFF,
+               -1px 0 0 #FFF, 1px 0 0 #FFF;
+  margin: 10px 10px;
+}
+
+p {
+  margin: 10px 60px;
+}
+
+/* img {
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+} */
+.icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.picture {
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+}
+
+/* table {
+  margin: auto;
+} */
+/* th {
+  width: 25%;
+} */
+.back {
+  text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+               -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+               0px 1px 0 #FFF,  0-1px 0 #FFF,
+               -1px 0 0 #FFF, 1px 0 0 #FFF;
+  background: linear-gradient(to bottom right, #A2A2E8, #E09DDA, #E2D89E);
+  border: 1px solid;
+  border-radius: 6px;
+  border-color: #EF51D7;
+  height: 20px;
+  padding: 8px;
+  margin: 10px 10px;
+}
+
+/* .post_title {
+  margin: 10px 60px;
+} */
+#error_explanation {
+  color: red;
+  margin: 10px 60px;
+}
+
+/* .sentence {
+  float: right;
+} */
+
+li {
+  list-style: none;
+}
+ul {
+  padding: 0;
+}
+
+.chunk {
+  background-color: white;
+  /* border: 1px solid; */
+  border-radius: 10px;
+  border-color: white;
+  width: 350px;
+  padding: 30px;
+  margin: 30px 15px;
+}
+/* .post {
+  display: table-cell;
+}
+.sentence {
+  width: 300px;
+  display: table;
+  table-layout: fixed;
+} */
+.option_btn {
+  text-decoration: none;
+  /* color: #0071ff; */
+  text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+               -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+               0px 1px 0 #FFF,  0-1px 0 #FFF,
+               -1px 0 0 #FFF, 1px 0 0 #FFF;
+  /* background-color: #ceeeff; */
+  background: linear-gradient(to bottom right, #A2A2E8, #E09DDA, #E2D89E);
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #EF51D7;
+  padding: 5px;
+}
+.option {
+  margin: 7px;
+}
+
+/* .form_area {
+  text-align: center;
+} */
+.select {
+  margin: auto;
+}

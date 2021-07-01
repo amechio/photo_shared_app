@@ -1,6 +1,6 @@
 <h1>以下の内容で、投稿する。</h1>
 <%= form_with(model: @post, url: posts_path, local: true) do |form| %>
-  <%= image_tag(@post.picture.url) if @post.picture && @post.picture.url %>
+  <%= image_tag @post.picture.url, class: "picture" if @post.picture && @post.picture.url %>
   <%= form.hidden_field :picture_cache %>
   <%= form.hidden_field :content, class:"sentence" %>
   <p><%= @post.content %></p>
