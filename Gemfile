@@ -9,6 +9,7 @@ gem 'bcrypt'
 group :development do
   gem 'letter_opener_web'
 end
+gem 'faker'
 
 gem 'rails', '~> 5.2.5'
 gem 'pg', '>= 0.18', '< 2.0'
