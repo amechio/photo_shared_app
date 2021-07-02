@@ -10,23 +10,28 @@
   </div>
 <% end %>
 <%= form_with(model: @user, local: true) do |f| %>
-
-  <%= image_tag @user.icon.url if @user.icon && @user.icon.url %>
-  <%= f.label :アイコン %>
-  <%= f.file_field :icon %>
-
-
-  <%= f.label :名前 %>
-  <%= f.text_field :name %>
-
-  <%= f.label :メールアドレス %>
-  <%= f.email_field :email %>
-
-  <%= f.label :パスワード %>
-  <%= f.password_field :password %>
-
-  <%= f.label :確認用パスワード %>
-  <%= f.password_field :password_confirmation %>
-
-  <%= f.submit "プロフィールを更新" %>
+  <div class="field">
+    <%= image_tag @user.icon.url, class: "picture" if @user.icon && @user.icon.url %>
+    <%= f.label :アイコン %>
+    <%= f.file_field :icon, class: "select" %>
+  </div>
+  <div class="field">
+    <%= f.label :名前 %>
+    <%= f.text_field :name, class: "input" %>
+  </div>
+  <div class="field">
+    <%= f.label :メールアドレス %>
+    <%= f.email_field :email, class: "input" %>
+  </div>
+  <div class="field">
+    <%= f.label :パスワード %>
+    <%= f.password_field :password, class: "input" %>
+  </div>
+  <div class="field">
+    <%= f.label :確認用パスワード %>
+    <%= f.password_field :password_confirmation, class: "input" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "プロフィールを更新", class: "btn" %>
+  </div>
 <% end %>

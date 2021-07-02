@@ -1,8 +1,8 @@
 <h1><%= @user.name %> のページ</h1>
-<p><%= image_tag @user.icon.url if @user.icon && @user.icon.url %></p>
+<p><%= image_tag @user.icon.url, class: "picture" if @user.icon && @user.icon.url %></p>
 <p>メールアドレス: <%= @user.email %></p>
-<%= link_to "お気に入り一覧", favorites_path %>
+<%= link_to "お気に入り一覧", favorites_path, class: "back" %>
 <%= link_to "ホームへ", posts_path, class:"btn" %>
 <% if @user.id == current_user.id %>
-  <%= link_to "プロフィール編集", edit_user_path(id: @user.id) %>
+  <%= link_to "プロフィール編集", edit_user_path(id: @user.id), class: "back" %>
 <% end %>
